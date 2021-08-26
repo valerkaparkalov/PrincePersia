@@ -37,7 +37,10 @@ public class View {
         setM_LINE(scanner.nextInt());
         System.out.println("Введите количеество столбцов!");
         setN_COLUMN(scanner.nextInt());
-//отправляет нашу локацию в класс Move
+if(N_COLUMN==1 && M_LINE==1){
+    System.out.println("минимально количество ходов = " + (H_LEVEL-1) * 5 + "секунд");
+    System.exit(0);
+}
 Move move = new Move(getH_LEVEL(),getM_LINE(),getN_COLUMN());
 move.move();
         }
